@@ -272,7 +272,7 @@ console.log(jonas);
 console.log(jonas.firstName + ' has ' + jonas.friends.length + ' friends and his best friend is ' + jonas.friends[0]);
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
 */
-
+/*
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
@@ -284,6 +284,7 @@ const jonas = {
    /* calcAge: function (birthYear){
         return 2037 - birthYear;
     }*/
+/*
     calcAge: function(){
         console.log(this);
         return 2037 - this.birthYear;
@@ -301,13 +302,43 @@ console.log(jonas.calcAge());
 
 console.log(jonas.getSummary())
 
+*/
 
+/* CHALLENGE
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
 
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
 
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi, john.bmi);
 
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s ${mark.bmi} is higher than ${john.fullName}'s ${john.bmi}`);
+}
+else{ console.log(`${john.fullName}'s ${john.bmi} is higher than ${mark.fullName}'s ${mark.bmi}`);
+}
+*/
 
-
-
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
 
 
 
