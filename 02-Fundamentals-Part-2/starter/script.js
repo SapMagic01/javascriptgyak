@@ -234,6 +234,8 @@ const jonasArray = [
     ['Michael', 'Peter', 'Steven']
 ];
 */
+
+/*
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
@@ -269,6 +271,41 @@ console.log(jonas);
 
 console.log(jonas.firstName + ' has ' + jonas.friends.length + ' friends and his best friend is ' + jonas.friends[0]);
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
+*/
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+   /* calcAge: function (birthYear){
+        return 2037 - birthYear;
+    }*/
+    calcAge: function(){
+        console.log(this);
+        return 2037 - this.birthYear;
+    },
+
+    getSummary: function() {
+      return `${this.firstName} is a ${this.calcAge()}-year old ${this.job} and he has ${this.hasDriversLicense ? 'a' : 'no' } drivers license`;
+
+    }
+};
+
+console.log(jonas.calcAge());
+
+//console.log(jonas['calcAge'](1991));
+
+console.log(jonas.getSummary())
+
+
+
+
+
+
 
 
 
