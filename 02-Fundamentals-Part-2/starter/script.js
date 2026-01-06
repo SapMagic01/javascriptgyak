@@ -335,10 +335,37 @@ if (mark.bmi > john.bmi) {
 else{ console.log(`${john.fullName}'s ${john.bmi} is higher than ${mark.fullName}'s ${mark.bmi}`);
 }
 */
-
+/*
 for (let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetition ${rep}`);
 }
+*/
+
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037-1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+const types = [];
+
+
+for (let i = 0; i <= jonas.length; i++) {
+    console.log(jonas[i]);
+
+    types[i] = typeof jonas[i];
+}
+
+
+
+
+
+
+
+
 
 
 
