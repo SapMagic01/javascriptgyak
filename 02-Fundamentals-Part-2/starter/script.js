@@ -411,7 +411,7 @@ for (let exercise = 1; exercise <= 4; exercise++) {
     }
 }
 */
-
+/*
 let rep = 1;
 while(rep <= 10) {
     console.log(`Lifting weights repetition ${rep}`);
@@ -425,6 +425,7 @@ while (dice !== 6) {
     console.log(`You rolled a ${dice}`);
     if (dice === 6) console.log(`Loop is about to end`);
 }
+*/
 
 
 
