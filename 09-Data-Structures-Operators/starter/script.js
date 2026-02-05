@@ -63,7 +63,15 @@ const restaurant = {
   }
 };
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries())
+  console.log(`${i + 1}: ${el}`);
+
+
+/*
 //1 Destructuring
 //SPREAD right side of =
 const arr = [1, 2, ...[3, 4]];
@@ -96,6 +104,7 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
+*/
 
 //spread operator
 /*
