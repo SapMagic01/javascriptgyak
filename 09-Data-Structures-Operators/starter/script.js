@@ -69,6 +69,32 @@ const restaurant = {
   }
 };
 
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+/* Test Data
+underscore_case
+first_name
+Some_Variable
+calculate_AGE
+delayed_departure
+*/
+
+document.querySelector('button').addEventListener('click', function() {
+  const text = document.querySelector('textarea').value;
+  const rows = text.split('\n');
+
+  for(const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+    //console.log(row, first, second);
+
+    const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`;
+    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+  }
+});
+
+
+/*
 //split and join
 console.log('a+very+nice+string'.split('+'));
 console.log('Jonas Scmedtmann'.split(' '));
@@ -113,6 +139,7 @@ const planesInLine = function (n) {
 }
 planesInLine(5);
 planesInLine(3);
+*/
 
 /*
 const airline = 'TAP Air Portugal';
