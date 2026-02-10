@@ -69,16 +69,25 @@ const restaurant = {
   }
 };
 
+const getCode = str => str.slice(0,3).toUpperCase();
+
+for(const flight of flights.split('+')) {
+  const [type, from, to, time] = flight.split(';');
+  const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll('_', ' ')} from ${getCode(from)} to ${getCode(to)} ${time.replace(':', 'h')}`.padStart(50);
+  console.log(output);
+}
+
+/*
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
 
-/* Test Data
+/!* Test Data
 underscore_case
 first_name
 Some_Variable
 calculate_AGE
 delayed_departure
-*/
+*!/
 
 document.querySelector('button').addEventListener('click', function() {
   const text = document.querySelector('textarea').value;
@@ -92,6 +101,7 @@ document.querySelector('button').addEventListener('click', function() {
     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
   }
 });
+*/
 
 
 /*
