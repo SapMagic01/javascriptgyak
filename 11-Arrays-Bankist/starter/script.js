@@ -140,7 +140,7 @@ console.log('jonas'.at(-1));
 
 //Julia test data [3, 5, 2, 12, 7] Kate test data [4, 1, 15, 8, 3]
 //Julie test data 2 [9, 16, 6, 8, 3] Kate test data 2 [10, 5, 6, 1, 4]
-
+/*
 function checkDogs (dogsJulia, dogsKate){
   const dogsJuliaCorrected = dogsJulia.slice();
   dogsJuliaCorrected.splice(0, 1);
@@ -155,3 +155,15 @@ function checkDogs (dogsJulia, dogsKate){
   })
 }
 checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+*/
+
+const eurToUsd = 1.1;
+
+const movementsUSD = movements.map(function(mov){
+  return mov * eurToUsd;
+})
+
+const movementsDescriptions = movements.map((mov, i) =>
+  `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
+);
+console.log(movementsDescriptions);
